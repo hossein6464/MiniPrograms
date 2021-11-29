@@ -21,3 +21,4 @@ public class CalculateTips {
         System.out.println("The gratuity is $" + calculatedTips + " and total is $" + totalAmountPlusTips);
     }
 }
+
