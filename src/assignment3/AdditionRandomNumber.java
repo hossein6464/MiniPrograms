@@ -13,8 +13,8 @@ public class AdditionRandomNumber {
         // creating an object of scanner to recieve inputs from the user
         Scanner input = new Scanner (System.in);
         System.out.println("Please enter guess:");
-        int userGuess = -1;
 
+        int userGuess = -1;
         // the logic behind for comparing the numbers
         while (sum != userGuess) {
                userGuess = input.nextInt();
