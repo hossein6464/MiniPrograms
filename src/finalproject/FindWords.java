@@ -22,25 +22,20 @@ Example 3:
 Input: words = ["adsdf","sfd"]
 Output: ["adsdf","sfd"]
 
-Constraints:
-1 <= words.length <= 20
-1 <= words[i].length <= 100
-words[i] consists of English letters (both lowercase and uppercase).
-
 Solution:
     First step, to the solution would be defining variables. We need a boolean to keep track of the words and since we don't know
 the actual size of the return array we need to definie an ArrayList. Now, Every time we find a match in our array of words,
 the Boolean will return true and that specific word gets added to our ArrayList.
     Second step, Defining a loop to go through every element in our array of Strings. Inside the for loop we need to use an if statement
- with 3 parts which each is divided by an || (or). Now we need to use Regex to help us with the match
+with 3 parts which each is divided by an || (or). Now we need to use Regex to help us with the match
 		wordsArray[i].toLowerCase().matches("[qwertyuiop]+") ||
 		wordsArray[i].toLowerCase().matches("[asdfghjkl]+") ||
 		wordsArray[i].toLowerCase().matches("[zxcvbnm]+“
 		[]: The brackets mean Find one character from the options between the bracket
 		n+ :  Matches any string that contains at least one of n
-		regardless of how many times the characters inside the strings are repeated if they match string between the bracket, if statement
-		will return true and the word gets added to the list.
-		if even one element in word does not match the whole statement will become false.
+regardless of how many times the characters inside the strings are repeated if they match string between the bracket, if statement
+will return true and the word gets added to the list.
+if even one element in word does not match the whole statement will become false.
  */
 
 import java.util.ArrayList;
@@ -55,8 +50,8 @@ public class FindWords {
 
         String[] sampleCases = {"2134", "zxcvbnm", "ergds", "bcxbc", "gsdfgsdhsd", "wewrytyreqq"};
         // returning a list of string and turning it into an array and print it
-        System.out.println(findWords(sampleCases));
-        System.out.println(findWordsTwo(sampleCases));
+        System.out.println("Words in the list are " + findWords(sampleCases) + " using regex method");
+        System.out.println("Words in the list are " + findWordsTwo(sampleCases) + " using row finder");
 
     }
 
