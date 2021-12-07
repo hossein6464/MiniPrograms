@@ -28,4 +28,14 @@ public class HexDigit2Dec {
             System.out.println(ch + " is an invalid input");
         }
     }
+    public static int negative(int i) {
+
+        if (i>0) {
+            return 1;
+        } else if (i==0) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
 }
