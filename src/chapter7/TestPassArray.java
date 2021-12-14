@@ -4,6 +4,7 @@ public class TestPassArray {
     /**
      * Main method
      */
+
     public static void main(String[] args) {
         int[] a = {1, 2};
 
@@ -21,7 +22,6 @@ public class TestPassArray {
         System.out.println("After invoking swapFirstTwoInArray");
         System.out.println("array is {" + a[0] + ", " + a[1] + "}");
     }
-
     /**
      * Swap two variables
      */

@@ -21,8 +21,13 @@ Example 2:
 Input: g = [1,2], s = [1,2,3]
 Output: 2
 Explanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2.
-You have 3 cookies and their sizes are big enough to gratify all the children,
+You have 3 cookies and their sizes are big enough to gratify all of the children,
 You need to output 2.
+
+Constraints:
+1 <= g.length <= 3 * 104
+0 <= s.length <= 3 * 104
+1 <= g[i], s[j] <= 231 - 1
 
 Solution:
 We assume we have two unsorted arrays. One array for the children and their greed factor and one array for the cookies and their size;
@@ -38,10 +43,10 @@ Finally, we return our counter and print the number of children satisfied
 
 public class FindContentChildren {
     public static void main(String[] args) {
-        int[] children = {4,5,2,5,9,0,7};
-        int[] cookies = {1, 2, 3,8,4,9};
+        int[] children = {1,2};
+        int[] cookies = {1, 2, 3};
 
-        System.out.println("We have " + String.valueOf(findContentChildren(children, cookies)) + " happy children");
+        System.out.println(String.valueOf(findContentChildren(children, cookies)));
 
     }
 
@@ -53,9 +58,7 @@ public class FindContentChildren {
 
         int satisfiedChildrenCounter = 0;
 
-        // look for each cookie size and compare it to the child's greed
-        // if the child is satisfied counter will increase
-        // if either the cookies are finished or there is no more child to satisfy we get out of the loop
+        //
         for (int i = 0; satisfiedChildrenCounter < sortedChild.length && i < sortedCookies.length; i++) {
             if (sortedCookies[i] >= sortedChild[satisfiedChildrenCounter]) {
                 satisfiedChildrenCounter++;
@@ -67,11 +70,9 @@ public class FindContentChildren {
     public static int[] sortArray(int array[]) {
 
         for (int i = 0; i < array.length - 1; i++) {
-
             // Find the minimum in the list
             int currentMin = array[i];
             int currentMinIndex = i;
-
             // Find new min in the rest of the array from our current position
             for (int j = i + 1; j < array.length; j++) {
                 if (currentMin > array[j]) {

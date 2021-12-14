@@ -59,6 +59,7 @@ public class FindWords {
 
         List<String> listOfWordsFound=new ArrayList<>();
         for(int i=0;i<wordsArray.length;i++){
+
             boolean tracker=false;
 
             // Using regex to match the lowercase of each string in our array of string
